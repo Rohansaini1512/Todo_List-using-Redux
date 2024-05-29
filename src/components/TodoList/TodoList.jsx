@@ -1,6 +1,6 @@
 import Todo from "../Todo/Todo"
 
-function TodoList({list , setList}){
+function TodoList({list , updateList}){
 
     return(
         <div>
@@ -15,9 +15,9 @@ function TodoList({list , setList}){
                                     if(t.id == todo.id){
                                         todo.finished = isFinished;
                                     }
-                                    return todo;
+                                    return t;
                                 });
-                                setList(updateList);
+                                updateList(updateList);
                             }}
                             />)}
         </div>
